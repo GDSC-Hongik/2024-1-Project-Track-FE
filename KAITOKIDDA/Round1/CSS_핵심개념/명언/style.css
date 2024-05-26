@@ -1,0 +1,32 @@
+body {
+  background: #f3f3f3;
+  font-family: Poppins, 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#title {
+  font-size: 20px;
+font-weight: 400;
+text-align: center;
+}
+
+#subtitle {
+  color: #818181;
+font-size: 12px;
+font-weight: 400;
+text-align: center;
+}
+
+.goodquotes {
+  background: #ffffff;
+margin: 24px auto;
+padding: 24px;
+width: 320px;
+}
+
+.greatnames {
+  color: #818181;
+font-size: 12px;
+font-weight: 400;
+}
