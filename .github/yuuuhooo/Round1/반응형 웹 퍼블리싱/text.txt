@@ -1,0 +1,21 @@
+@media (min-width: 768px) { <!-- 가로 길이가 768px를 넘어가면 이런 스타일을 입혀라.-->
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 24px;
+  }
+}
+
+
+
+@media (min-width: 992px) { <!-- 가로 길이가 992px를 넘어가면 이런 스타일을 입혀라.-->
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 32px;
+  }
+}
+
+@media를 미디어 쿼리라고 함!!!!!
