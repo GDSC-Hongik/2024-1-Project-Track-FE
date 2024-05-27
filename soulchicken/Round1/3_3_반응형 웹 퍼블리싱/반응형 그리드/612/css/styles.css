@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 60px 350px 320px 385px 200px 200px;
+  grid-template-areas: "R" "O" "Y" "G" "B" "P";
+}
+
+#div1 {
+  background-color: #FF0000;
+  grid-area: R;
+}
+
+#div2 {
+  background-color: #FFA500;
+  grid-area: O;
+
+}
+
+#div3 {
+  background-color: #FFFF00;
+  grid-area: Y;
+}
+
+#div4 {
+  background-color: #008000;
+  grid-area: G;
+}
+
+#div5 {
+  background-color: #0000FF;
+  grid-area: B;
+}
+
+#div6 {
+  background-color: #4B0082;
+  grid-area: P;
+}
+
+
+/* 브라우저의 가로 길이가 768px을 넘어가면 아래를 적용하라 */
+@media (min-width: 768px) {
+	body {
+    grid-template-rows: 60px 350px 320px 360px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "R R" "O O" "Y Y" "G B" "G P";
+  }
+}
+
+/* 브라우저의 가로 길이가 992px을 넘어가면 아래를 적용하라 */
+@media (min-width: 992px) {
+  	body {
+    grid-template-rows: 60px 350px 175px 175px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "R R R R" "O O Y Y" "O O G B" "O O G P";
+  }
+}

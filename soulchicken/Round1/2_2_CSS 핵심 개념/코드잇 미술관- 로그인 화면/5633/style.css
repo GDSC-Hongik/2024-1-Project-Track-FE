@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+form {
+  width: 360px;
+  margin: 120px auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 24px auto;
+  font-size: 36px;
+  font-weight: 700;
+  color: 4e4e4e;
+}
+
+label {
+  display: block;
+  margin: 16px 0 8px;
+  color: #2c2c2c;
+}
+
+input {
+  display: block;
+  padding: 16px 24px;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+}
+
+button {
+  border: none;
+  display: block;
+  padding: 16px;
+  width: 100%;
+  margin: 24px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: #2c2c2c;
+}
+
+.forgotpwd {
+  text-align: right;
+}
+
+.forgotpwdlink {
+  font-size: 14px;
+  color: #ababab;
+}
+
+.joinus {
+  text-align: center;
+  font-size: 14px;
+  color: #ababab;
+}
+
+.joinlink {
+  color: #2c2c2c;
+}
