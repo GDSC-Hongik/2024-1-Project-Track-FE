@@ -1,0 +1,9 @@
+/*이미지들이 가로로 스크롤 되도록 만들기*/
+
+.artworks {
+    margin: 0 -48px;
+    overflow: scroll;
+    white-space: nowrap; /*줄바꿈 되지않고 한 줄로 나열된다.*/
+  }
+  
+  

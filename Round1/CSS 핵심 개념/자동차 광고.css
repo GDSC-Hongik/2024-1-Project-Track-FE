@@ -1,0 +1,24 @@
+/*
+광고 (.car)
+모서리가 32px 정도로 둥글게
+해시 태그 (.hashtag)
+테두리는 1px 실선으로 연회색(#bababa)
+모서리가 10px 만큼 둥글게
+*/
+
+.car {
+    /* ... */
+    border-radius: 32px;
+  }
+
+  .hashtag {
+    /* ... */
+    border: 1px solid #bababa;
+  }
+
+  .hashtag {
+    /* ... */
+    border: 1px solid #bababa;
+    border-radius: 10px;
+  }
+  

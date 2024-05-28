@@ -1,0 +1,71 @@
+/*
+위 그림은 이브 클랭의 <IKB 191>이라는 작품인데요. 여기서 IKB라는 건 International Klein Blue(IKB)라고 이름 붙인 파란색인데, 이브 클랭이 연구해서 만든 색입니다. IKB 색은 다음과 같이 만듭니다. (0~255 값 기준)
+
+빨강: 0
+초록: 47
+파랑: 167
+이번 실습에서는 rgb, rgba 색상 단위와 상대적인 크기 단위를 사용해서 이브 클랭의 전시를 소개하는 포스터를 만들어 봅시다. 아래 적용할 스타일을 참고해서 코드를 완성해 주세요.
+
+적용할 스타일
+artist 클래스
+글자 크기: 최상위 태그 글자 크기의 3배
+글자색: IKB 색
+title 클래스
+글자 크기: 부모 태그 글자 크기의 1.25배
+ikb 클래스
+배경색: IKB 색
+세로 마진: 부모 태그 글자 크기의 2.5배
+가로 마진: auto
+date 클래스
+글자 색: 절반 만큼 불투명한 검정색 (검정색은 빨강: 0, 초록: 0, 파랑: 0 입니다.)
+*/
+
+html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .artist {
+    color: rgb(0, 47, 167);
+    font-family: Rajdhani;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin: 0;
+  }
+  
+  .title {
+    color: #747780;
+    font-size: 1.25em;
+    font-weight: 400;
+    margin: 0 0 24px 0;
+  }
+  
+  .ikb {
+    background-color: rgb(0, 47, 167);
+    height: 320px;
+    margin: 2.5em auto;
+    width: 320px;
+  }
+  
+  .info {
+    font-size: 24px;
+  }
+  
+  .location {
+    font-size: 24px;
+    margin: 8px 0;
+  }
+  
+  .date {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  
