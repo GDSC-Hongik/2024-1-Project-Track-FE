@@ -1,0 +1,21 @@
+for zip_file in *.zip; do
+    # zip 파일 이름에서 확장자를 제거하여 폴더 이름으로 사용합니다.
+    folder_name="${zip_file%.zip}"
+    
+    # 폴더 이름의 앞뒤 공백을 제거합니다.
+    trimmed_folder_name="$(echo -e "${folder_name}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+    
+    # 새로운 폴더를 만듭니다.
+    mkdir -p "$trimmed_folder_name"
+    
+    # zip 파일을 폴더에 압축 해제합니다.
+    unzip -q "$zip_file" -d "$trimmed_folder_name"
+    
+    # 압축 해제 완료 메시지를 출력합니다.
+    echo "압축 해제 완료: $zip_file -> $trimmed_folder_name/"
+    
+    # 원본 zip 파일을 삭제합니다.
+    rm "$zip_file"
+    
+    echo "원본 zip 파일 삭제: $zip_file"
+done
