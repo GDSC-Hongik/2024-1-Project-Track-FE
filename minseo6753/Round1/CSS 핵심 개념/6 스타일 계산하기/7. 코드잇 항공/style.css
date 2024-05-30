@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Titillium Web';
+}
+
+#headline,
+#mainticket,
+.ticket,
+#line {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.info {
+  font-size: 12px;
+  color: #b3bdd5;
+}
+
+#bg1 {
+  background-color: #11172b;
+  padding: 12px 0;
+}
+#bg1 img {
+  height: 24px;
+  margin-right: 10px;
+}
+
+#headline {
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  height: 24px;
+  line-height: 1;
+  
+}
+#headline span {
+  font-weight: 600;
+}
+
+#bg2 {
+  background-color: #f8f8f8;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+#mainticket {
+  background-color: #ebeff8;
+  padding: 24px 32px;
+  border-radius: 8px;
+}
+
+#mainticket #tickettype {
+  font-size: 16px;
+  color: #b3bdd5;
+  margin-bottom: 8px;
+
+  
+}
+#mainticket img {
+  height: 12px;
+  margin-right: 8px;
+}
+#mainticket #way {
+  font-size: 32px;
+  color: #000000;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+#mainticket #date {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 0 16px;
+}
+
+#line {
+  margin: 20px auto;
+  border-top: 1px dashed #b6bfd3;
+} 
+
+.ticket {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding:0 24px 24px;
+  margin-top: 20px;
+}
+.ticket .ticket-number {
+  font-size: 12px;
+  font-weight: 700;
+  color: #16bf97;
+  border-bottom: 1px solid #dbf1ec;
+  padding: 8px 24px;
+  margin-left: -24px;
+  margin-bottom: 26px;
+}
+.ticket .info {
+  font-weight: 500;
+  margin: 4px 0;
+}
+.ticket .time {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a345e;
+}
+.ticket .time img {
+  width: 18px;
+  margin: 0 10px;
+}
+.ticket .flight {
+  font-size: 16px;
+  color: #0b1f66;
+}
+.ticket .select {
+  text-align: right;
+
+}
+.ticket .select a {
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a345e;  
+}
+
+.ticket .select a#soldout{
+  color: #dce0e8;
+}
