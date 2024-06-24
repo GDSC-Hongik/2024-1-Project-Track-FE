@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.subtitle1{
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  margin: 24px 48px;
+}
+.subtitle2{
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 40px 48px 8px;
+}
