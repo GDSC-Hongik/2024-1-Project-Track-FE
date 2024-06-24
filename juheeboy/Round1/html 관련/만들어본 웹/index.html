@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        ul > li {
+            list-style: none;
+            border: 1px solid #dddddd;
+            border-radius: 24px;
+            padding: 8px;
+            display: inline-block; /* 변경된 부분 */
+            margin-right: 10px; /* 아이템 사이 간격 */
+        }
+    </style>
+</head>
+<body>
+    <!-- <a href="company/">주희의 관한 것들</a> -->
+    <a href="company/index.html">주희의 관한 더 자세한 것들</a>
+    <br>
+    <!-- 목차를 설정한 것임 파일내에서 . 그장소로 이동 -->
+    <ul>
+        <!-- <ol> 순서가 있는 리스트 각 요소들에 li를 붙여주어야함 순서가 없다면 ul 대신  -->
+        <li><a href="#juhee_name">주희의 이름</a></li>
+        <br>
+        <li><a href="#juhee_age">주희의 나이</a></li>
+        <br>
+        <li><a href="#juhee_shcool">주희의 학교</a></li>
+    </ul>
+    <h2> id="juhee_name">주희의 이름</h2>
+    주희의 이름은 이주희이다.
+    <h2 id="juhee_age">주희의 나이</h2>
+    주희의 나이는 22살이다. 하지만 만 20세이다.
+    <h2 id="juhee_school">주희의 학교</h2>
+    주희의 초등학교는 신월초등학교, 월암중학교, 상원고등학교, 경북대학교(중퇴) 간호학과, 홍익대학교 자율전공 학부이다.
+    <br>
+    <br>
+    <a href="tel:+821033209938">문의 사항 있으면 전화주세요 (버튼 누르기)</a>
+    <!-- <a href="mailto:anim0203@naver.com">메일보내기</a> -->
+</body>
+</html>

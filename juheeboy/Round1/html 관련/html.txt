@@ -1,0 +1,86 @@
+Html 문법
+
+커멘트키 + 슬래쉬>>주석 달기가 됨
+List
+Ul >> 기호 없는 리스트 구성에는<li>를 모두 붙여줌
+Ol >> 기호 있는 리스트
+리스트는 스타일에서 ol->li{
+}에서 무언가를 해줘도 되고
+List-stlye:하고 뭔가를 써도됨 disc or none 등.
+<ol type:~~>을 넣어서 적용해 줄 수도 있음.
+Display를 flex로 하면 리스트들이 가로로 배치
+Inline-block을 하면 가로로 배치되는데 나는 왜 안되는지 모르겟음;;(ul->li와 ul에 둘다 적용해줘야함)
+
+Table 표를 만드는 법 > <tavle><tr><td>을 씀
+
+<table>
+	<tr>
+		<td>ddd</td>
+		<td>ddd</td>
+다음줄로 넘어가고 싶다면
+	<tr> 밑에는 똑같이…
+	여기서 단순 구성요소가 아니라 제목(주제에 해당하는 글 이라면)
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th></th>
+	</thead>
+	이후 
+	<tbody>
+		<tr> 근데 몸체 부분에서도 헤더가 있다면
+			<th></th>를 사용하여 처리하면됨
+바닥글은 <tfoot>임
+
+여기서 table 의 style
+table{
+	border:1px solid
+	border-collapse:collapse ;쓰면 나누어져있던 선들이 하나로 합쳐짐 하위 스타일부터 적용됨	
+} 
+th,td{
+}
+thead th, head td{
+}
+<img src=“이미지 주소 alt=“이미지 설명” 높이와 너비를 적어주면 효율이 더 좋음>
+<video src=“비디오 주소” autoplay muted(크롬은 muted 필수 controls 높이와 너비 (height=“” weight=“ ”><video>
+
+<audio src=“주소” control autoplay(크롬은 자동 종작 xx)>
+
+<iframe src=“다른 html 파일을 불러옴” 높이와 넓이를 설정도 가능> 유튜브가 이를 사용
+
+Form 
+<form>
+	<label>
+		<input>
+	</label>
+	이렇게 연결 할 수도 있고
+	<label for=“a”></lable>
+	<input id=“a”> 라고 적어도 연결이 된다
+</form>
+<input ~~ name=“email(아무거나 자유롭게 사용가능” type=“email(정해져있는 방식이 있음 ex “password”)>
+
+Form 태그 안에 버튼을 추가하면
+type=“reset” “submit” “button”
+안에 있는 데이터가 아뜨케어뜨케 됨
+근데 form 밖에 버튼을 생성하면 그냥 폼 안 에서는 아무 기능 없음
+
+<input placeholder=“박스 안에 넣고 싶은 글자”>
+
+안의 글자 바꾸기 
+ Style 에서
+Input::placeholder{
+	color: ~
+}
+
+반드시 입력 <~~ required>
+자동완성<autocomplete=“on” or email 이나 tel을 넣어줄 수도 있음>
+
+스타일 적용은 
+<link rel=“stylesheet” href=“style.css”>
+<link rel=“icon” href=“아이콘 주소”>
+
+<script src=“자바 스크립트 주소”></script> 자바스크립트를 불러 올 수 잇음
+
+헤드 부분에는 메타 데이터가 있다.
+
+Main> nav> header>footer>>article>>section div랑 별 차이는 없지만 작성한 사람의 의도가 보여짐

@@ -1,0 +1,123 @@
+&lt;~&gt;
+>꺾쇠 기호 넣는 올바른 방법
+
+<a href=“속성값”> 하이퍼링크 넣을 이름</a>
+<img src=“속성값”>
+<p></p>단락을 나눔
+<h1…></h1…>
+<br> enter
+<div> 영역 나누기
+
+Html 기본 구조
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset=“utf-8”>
+</head>
+<body>
+</body>
+</html>
+
+글자>> font-weight/ font-size/font-family/color
+배경>>background-color
+안쪽 여백 padding: ~px ~px
+~바깥 여백 margin: ~px 가로는 auto 를 사용할 수 있음
+
+Head 쪽에>> css 기본ㄴ값 선언
+<style> 
+h3{
+Color(속성):(콜론) #fffff(속성값);(세미콜론) 
+}
+</style>
+
+id로 구별하기
+
+<h3 id:name>
+이라고 정해주면 
+Style 부분에 #name{ 속성을 쓰면 됨}
+
+아이디를 중복으로 쓰고 싶다면
+<h3 class:”name”>
+<h3 class:”name”>
+Style 부분에 .name{속성}
+
+파일에서 css 분리하기 <link rel=“stylesheet” href=“style.css”>
+style.css는 파일 이름 안에 <style> 구간 복붙해서 넣어주기
+
+부모 크기 %로 나타내면 height:300px height: 50%(150px이 됨)
+부모 font (2em= 2*부모 font size) 
+1rem=<html:최상위태그>태그의 font size
+
+주석은/**/
+
+줄사이 간격 조절 line-height: n(font-size*n만큼)
+
+Text-decoration: underline/ line-through;
+
+배경 사진 넣기
+background-image: url(‘’)
+Background-repeat: no-repeat
+Background-position : center;
+Background-size: cover(짤릴 수 있고 꽉참)/contain(잘리지않고 꽉참);
+
+그라데이션 넣기
+Backgound-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1);
+여기에 이미지 더 해주고 싶으면 url(‘이미지’);
+
+box-shadow: px px px(흐린정도) px(퍼지는 정도) 색깔
+Opacity:(0에 가까울 수록 투명 1에 가까울 수록 불투명)
+
+Border-radius: 모서리를 둥글게함
+퍼센트나 픽셀로 표현함
+Border:1px(굵기) solid(선 스타일) 색상
+Box-sizing:border-box
+Style.css
+안의 코드에서 *이 달린것은 모든 요소에서 라는 뜻
+
+내용이 넘친다면 
+Overflow: scroll or hidden
+White-space:nowrap;
+
+Display
+-block
+	위에서 아래로 그리고 좌우로 꽉 차게 배치
+	
+-inline
+	s너비나 높이 지정 x 글
+	다른 요소들이 inline의 크기나 넓이는 신경쓰지 않음
+	인라인 블록 콘탠츠에 딱 맞게 글쓰는 방향으ㅗ 배치
+-display:inline-block 를 넣어주면 크기 조정 가능 다른 block들도 조정을 시작하기로 함
+
+-float: 좌우 방향>> 객체가 그 방향으로 inline을 고려하여 이동함
+
+선택자 목록으로 쓰기 
+.book-info,.book-list{
+	공통된 부분 스타일
+}
+
+style.css에서 이렇게 쓰면 됨
+
+클래스 중복으로 사용하는 것 가능
+(P class=“delay book-info”)선언
+p이면서 id 와 class 여러개 있는것 해당하는 스타일
+
+Style.css에서
+P.book-info#shipping.delay{
+}이런식으로 사용
+ 
+A;hover{
+	text-decoration:
+}
+Hover: 마우스를 올려두었을 때 표시되는것
+Visited: 들어갔다 오는 것을 표시해주는 것
+
+.Class img 하면 그 클래스의 자손 이미지 파일이 나올 수 잇음
+
+캐스케이드 순서:
+Class 이름이 같으면 나중에 써져있는 순으로
+명시도가 높은 순
+
+개발자 속성에서 inherited from 이라고 적힌 곳에서 진한 글씨가 써져있는 부분은 상속이 된 부분
+
+상속된 속성들은 선택자 속성보다 낮은 우선순위를 가짐
