@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+div {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ababab;
+}
+
+label {
+  margin: 16px 0 8px;
+  display: block;
+  color: #2c2c2c;
+}
+
+input {
+  border: 1px solid #d1d1d1;
+  color: #ababab;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  padding: 16px 24px;
+  margin: 8px 0;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+button {
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0;
+  border: none;
+  background-color: #2c2c2c;
+  padding: 16px;
+  width: 100%;
+}
+
+.login {
+  margin: 120px auto;
+  width: 360px;
+}
+
+.login-title {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #4e4e4e;
+}
+
+.login-forget {
+  text-align: right;
+}
+
+.login-forget-link {
+  font-size: 14px;
+  color: #ababab;
+}
+
+.login-signup {
+  font-size: 14px;
+  text-align: center;
+  color: #ababab;
+}
+
+.login-signup-link {
+  color: #2c2c2c;
+}
