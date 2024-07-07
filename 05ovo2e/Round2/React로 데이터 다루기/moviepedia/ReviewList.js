@@ -1,56 +1,82 @@
+import { useState } from "react";
+import Rating from "./Rating";
+import ReviewForm from "./ReviewForm";
 import "./ReviewList.css";
+import useTranslate from "../hooks/useTranslate";
 
-// 영화 포스터, 제목, 줄거리
 function formatDate(value) {
   const date = new Date(value);
   return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}`;
 }
 
-function ReviewListItem({ item, onDelete }) {
+function ReviewListItem({ item, onDelete, onEdit }) {
+  const t = useTranslate();
   const handleDeleteClick = () => {
     onDelete(item.id);
   };
+
+  const handleEditClick = () => {
+    onEdit(item.id);
+  };
+
   return (
     <div className="ReviewListItem">
       <img className="ReviewListItem-img" src={item.imgUrl} alt={item.title} />
       <div>
         <h1>{item.title}</h1>
-        <p>{item.rating}</p>
+        <Rating value={item.rating} />
         <p>{formatDate(item.createdAt)}</p>
         <p>{item.content}</p>
-        <button onClick={handleDeleteClick}>삭제</button>
+        <button onClick={handleEditClick}>{t("edit button")}</button>
+        <button onClick={handleDeleteClick}>{t("delete button")}</button>
       </div>
     </div>
   );
 }
 
-function ReviewList({ items, onDelete }) {
+function ReviewList({ items, onUpdate, onUpdateSuccess, onDelete }) {
+  const [editingId, setEditingId] = useState(null);
+
+  const handleCancel = () => setEditingId(null);
+
   return (
     <ul>
       {items.map((item) => {
+        if (item.id === editingId) {
+          const { id, imgUrl, title, rating, content } = item;
+          const initialValues = { title, rating, content, imgFile: null };
+
+          const handleSubmit = (formData) => onUpdate(id, formData);
+
+          const handleSubmitSuccess = (review) => {
+            onUpdateSuccess(review);
+            setEditingId(null);
+          };
+
+          return (
+            <li key={item.id}>
+              <ReviewForm
+                initialValues={initialValues}
+                initialPreview={imgUrl}
+                onSubmit={handleSubmit}
+                onSubmitSuccess={handleSubmitSuccess}
+                onCancel={handleCancel}
+              />
+            </li>
+          );
+        }
         return (
-          // 요소들의 순서가 바뀌어도 그대로 유지되게 함
-          // 데이터를 구분할 수 있는 고유한 값(id)로 지정
           <li key={item.id}>
-            <ReviewListItem item={item} onDelete={onDelete} />
+            <ReviewListItem
+              item={item}
+              onDelete={onDelete}
+              onEdit={setEditingId}
+            />
           </li>
         );
       })}
     </ul>
   );
 }
-
-// 영화 제목만
-/*
-function ReviewList({ items }) {
-  return (
-    <ul>
-      {items.map((item) => {
-        return <li>{item.title}</li>;
-      })}
-    </ul>
-  );
-}
-*/
 
 export default ReviewList;
